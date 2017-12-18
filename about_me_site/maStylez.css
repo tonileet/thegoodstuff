@@ -1,0 +1,127 @@
+body {
+  background-color:dimgrey;
+	margin: 20px;
+	padding: 0;
+   /* LightSlateGray
+   dimgrey */
+}
+
+#container {
+  position: relative;
+	margin: 0 auto;
+	width: 1280px;
+	background: white;
+  padding:20px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+#imagepane {
+  position: relative;
+	width:510px;
+  float:left;
+  left:0%;
+  top:10px;
+	background: white;
+	padding: 20px;
+}
+
+#contentpane {
+  position: absolute;
+  float:right;
+	width:680px;
+  top:10px;
+  left:550px;
+	background: white;
+	padding: 20px;
+  border-style: none;
+  padding: 20px;
+}
+
+#imppane {
+  padding: 10px;
+  background: white;
+  width: 1260px;
+}
+
+#footerpane {
+  padding: 10px;
+  background: white;
+  width: 1260px;
+  clear: both;
+  align-content: left;
+  vertical-align: bottom;
+}
+
+table {
+   background-color:white;
+   align:center;
+   width: 100%;
+   border-style:solid;
+   border-width: 0px;
+   -moz-border-radius: 5px;
+   -khtml-border-radius: 5px;
+   -webkit-border-radius: 5px;
+}
+
+h1 {
+  font-family:Verdana, Geneva, sans-serif;
+  color:Black;
+  font-size:36px;
+  font-weight:bold;
+  text-decoration-line:underline;
+}
+
+h2 {
+	font-family:Verdana, Geneva, sans-serif;
+	color:Black;
+	font-size: 20px;
+  vertical-align:top
+
+   /*font-weight: bold;
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%; */
+}
+
+a {
+	font-family:Verdana, sans-serif;
+	color:Black;
+	font-size: 20px
+}
+
+img{
+}
+#mapic {
+  max-width:508px;
+  max-height:677px;
+  padding-right:10px;
+  padding-bottom:10px;
+  float:left;
+  display: block;
+}
+
+#matext {
+  font-family:Verdana, Geneva, sans-serif;
+  display:block;
+  color:Black;
+  font-size: 14px
+}
+
+#header {
+font-family:Times, sans-serif;
+  font-size: 44px;
+  width: 45%;
+  height:50px;
+  vertical-align:bottom;
+  text-decoration: underline;
+}
+#header2 {
+  font-family:Verdana, sans-serif;
+  font-size: 24px;
+  width: 45%;
+  height:50px;
+  vertical-align:top;
+}
