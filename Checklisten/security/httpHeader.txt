@@ -1,0 +1,26 @@
+Checkliste: http Header
+
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
+
+[ ] Das X-Frame-Options Flag ist gesetzt
+[ ] Das X-XSS-Protection Flag ist gesetzt
+[ ] Das X-Content-Type-Options Flag ist gesetzt
+[ ] HTTP Strict Transport Security (HSTS) wird verwendet
+[ ] Eine Content-Security-Policy ist gesetzt
+[ ] Die CacheControl Flags werden wie gewünscht gesetzt
+
+Testwerkzeuge:
+	Entwicklerkonsole(F12) der gängigen Webbrowser
+	OWASP Zap
+	https://securityheaders.io/
+
+Weiterführende Links
+	https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#Security
+	https://www.keycdn.com/blog/http-security-headers/
+	https://www.contextis.com/blog/security-http-headers

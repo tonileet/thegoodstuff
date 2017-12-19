@@ -1,0 +1,25 @@
+Checkliste: Cookies
+
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
+
+[ ] Es ist bekannt welche Cookies von der Applikation verwendet werden
+[ ] Das name Attribut ist gesetzt
+[ ] Das Secure Flag ist gesetzt
+[ ] Das httpOnly Flag ist gesetzt
+[ ] Das Domain Attribut ist gesetzt
+[ ] Das Path Attribut  ist gesetzt
+[ ] Das expire oder Max-Age Attribut ist gesetzt
+[ ] Im Cookie werden  keine Benutzerinformationen unverschlüsselt gespeichert
+
+Testwerkzeuge:
+	Entwicklerkonsole(F12) der gängigen Webbrowser
+	OWASP Zap
+
+Weiterführende Links:
+	https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Cookies

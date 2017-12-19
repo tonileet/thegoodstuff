@@ -1,0 +1,30 @@
+Checkliste: File upload
+
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
+
+[ ] Nur bestimmte Dateitypen können hochgeladen werden
+[ ] MIME-Type prüfen
+[ ] 	Dateiendung prüfen
+[ ] 	Content Type im Header
+[ ] Der Inhalt der hochgeladenen Dateien wird geprüft (Virenscanner)
+[ ] Alle Stellen an denen man Dateien hochladen kann, sind bekannt
+[ ] Die hochgeladenen Dateien haben eine Maximalgröße
+[ ] Der parrallele Dateiupload ist begrenzt
+[ ] Der Dateiname hat eine maximale Anzahl an Zeichen
+[ ] Der Dateiname hat eine begrenzte Anzahl an erlaubten Zeichen
+[ ] Es können keine Windowsreservierten (verbotene) Dateinamen verwendet werden
+
+Verbotene Dateinamen:
+CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9,
+LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, and LPT9.
+
+
+Weiterführende Informationen
+https://www.owasp.org/index.php/Unrestricted_File_Upload
+https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx
