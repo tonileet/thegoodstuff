@@ -1,0 +1,50 @@
+Checkliste: Tomcat Konfiguration
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
+[ ] Die Beispielseiten wurden entfernt
+[ ] Die Standard-Seiten wurden entfernt:
+      - CATALINA_HOME/webapps/*
+      - CATALINA_HOME/server/webapps/*
+[ ] Die Manager Konfigurationen wurden entfernt:
+      - CATALINA_HOME/conf/Catalina/localhost/host-manager.xml
+      - CATALINA_HOME/conf/Catalina/localhost/manager.xml
+[ ] Die Dokumentation wurde entfernt
+[ ] Der Tomcat wird von einem dedizierten Benutzer betrieben (minimale Rechte!)
+[ ] Die Default-Logzieldateien wurden geändert
+      - Dateienamen
+      - Zielordner
+[ ] Die Versionsinformationen sind aus der Properties-Datei entfernt
+ - CATALINA_HOME/server/lib/catalina.jar -> ServerInfo.properties
+[ ] Der Server ist nur über HTTPS erreichbar
+
+server.xml
+[ ] Die Kommentare wurden entfernt
+[ ] Die Versionsnummer ist vom HTTP-Header entfernt
+[ ] Der "shutdown port" ist entfernt oder Passwort-geschützt
+[ ] Der "shutdown port" ist nicht 8005
+[ ] Nicht genutzte Connectoren (AJP) wurden entfernt
+[ ] Das Attribut maxPostSize ist sinnvoll gesetzt
+[ ] Das Attribut maxSavePostSize ist sinnvoll gesetzt
+[ ] Das Attribut maxParameterCount  ist sinnvoll gesetzt
+[ ] Das Attribut xpoweredBy  ist sinnvoll gesetzt
+[ ] Das Attribut maxSavePostSize ist sinnvoll gesetzt
+[ ] Das Attribut autoDeploy ist auf false
+[ ] Das Attribut deployOnStartup ist auf false
+[ ] Das Attribut deployXML ist auf false
+
+web.xml
+[ ] Das Attribut server.info legt keine technischen Informationen offen
+[ ] Die default-error-page wurde ausgetauscht und zeigt keinen stacktrace
+
+tomcat-users.xm
+[ ] Erlaubte IP-Adressen/hostnamen sind whitelistet
+
+Weiterführende Links:
+  https://tomcat.apache.org/tomcat-7.0-doc/security-howto.html
+  https://www.owasp.org/index.php/Securing_tomcat
+  https://www.mulesoft.com/de/tcat/tomcat-security
