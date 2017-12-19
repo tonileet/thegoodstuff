@@ -1,0 +1,24 @@
+Checkliste: Teststufen
+
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
+
+[ ] Es wird "Test-Driven" entwickelt
+[ ] Die Entwickler reviewen sich gegenseitig
+[ ] Es wird mittels Pair-Programming entwickelt
+[ ] Alle Unittests regelmäßig ausgeführt
+[ ] Eine Statische Quellcodeanalyse wird automatisiert durchgeführt
+[ ] Automatische Regressionstests werden regelmäßig durchgeführt
+[ ] Manuelle Tests werden regelmäßig durchgeführt
+[ ] Endanwendertests werden regelmäßig durchgeführt
+[ ] Sicherheitstests werden regelmäßig durchgeführt
+[ ] Last und Performancetests werden regelmäßig durchgeführt
+
+[ ] Für jede Teststufe sind Metriken definiert,
+die Aussagen über die Softwarequalität treffen
+[ ] Diese Metriken werden kontinuierlich erfasst, dokumentiert und kommuniziert
